@@ -6,8 +6,7 @@ var dataset = fs.readFileSync("week3-assignment/data/syllabus2.html");
 var $ = cheerio.load(dataset);
 var MyKey = process.env.MYKEY;
 var address = [];
-var finalOutPut = new Object();
-
+var finalArray = [];
 
 //-----change the format of the address to the form that fit GoogleAPI like:"detail1 + detail2 + detail3"
 $("td").each(function(i,elem){
@@ -25,13 +24,13 @@ function(address,callback){
         request("https://maps.googleapis.com/maps/api/geocode/json?address=" + address + ", +NY" + "&key=" + MyKey + "&language=en",function (error, response, body) {
                 if (!error && response.statusCode == 200) {
                     //use a object to storage the jsonfile(which is a collection of objects) which request form googleAPI and parse it to let js know this is a JSON format info.
+                      var finalOutPut = new Object();
                       finalOutPut.address = JSON.parse(body).results[0].formatted_address;
                       finalOutPut.location = JSON.parse(body).results[0].geometry.location;
+                              finalArray.push(finalOutPut)
+                    console.log(finalOutPut)
                     //out put the selected information to a json file.
-                      fs.appendFile('week3-assignment/address.json',JSON.stringify(finalOutPut),'utf8',(err) => {
-                          if (err){ throw err}
-                          
-                      })
+                
                 }
         });
         setTimeout(callback,2000);
@@ -45,7 +44,10 @@ function(err)
     } 
     else 
     {
+        console.log(finalArray);
+        fs.writeFileSync('week3-assignment/address.json',JSON.stringify(finalArray))
         console.log('All address have been processed successfully');
+        
     }   
 });
 
