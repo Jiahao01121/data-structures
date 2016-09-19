@@ -54,6 +54,28 @@ $("td").each(function(i,elem)
 **QUESTION1**
 .get之后是不可以.text()的。
 only can .nodeValue?
+remember after geted (Retrieve the DOM elements matched by the Cheerio object), need to add a nodeValue to get access to those DOM elements contant. 
+ [link](https://developer.mozilla.org/en-US/docs/Web/API/Node "Title")
 ```js
 console.log(data1.trim())
 ```
+
+#second Way to do this 
+```js
+var addresss = $("td").map(function(elem,i){
+         if ($(this).attr("style")=="border-bottom:1px solid #e3e3e3; width:260px"){
+         return $(this).contents().get(6).nodeValue
+         }}).toArray()
+         
+for(var i = 0 ; i<addresss.length; i++){
+          addresss[i] = addresss[i].split('\r\n\t\t\t\t\t\t')[1].split(',')[0];
+        
+}
+console.log(addresss)
+```
+
+.map() is nearly identical to .each() but .map() is to return the new array. see difference:  [link](https://developer.mozilla.org/en-US/docs/Web/API/Node "Title")
+
+.toArray():Retrieve all the DOM elements contained in the jQuery set as an array.
+
+.split can combo.
