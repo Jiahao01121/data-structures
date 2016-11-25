@@ -1,0 +1,14 @@
+{
+  "name": "weekly_assignment_02",
+  "version": "1.0.0",
+  "description": "week2 assignment; parse html and retrive all the address ",
+  "main": "week2-assignment.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Will Su",
+  "license": "ISC",
+  "dependencies":{
+  	"cheerio":"*"
+  }
+}

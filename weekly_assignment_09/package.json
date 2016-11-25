@@ -1,0 +1,16 @@
+{
+  "name": "weekly_assignment_9",
+  "version": "1.0.0",
+  "description": "weekly assignment 9 - make sensor data able to insert to DB instantly",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Will Su",
+  "license": "ISC",
+  "dependencies":{
+  	"pg":"*",
+  	"johnny-five":"*",
+  	"epoch.js":"0.4.2"
+  }
+}

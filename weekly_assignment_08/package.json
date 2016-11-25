@@ -1,0 +1,16 @@
+{
+  "name": "weekly_assignment_8",
+  "version": "1.0.0",
+  "description": "weekly_assignment_8 use johnny5 log data and insert to postgreDB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Will Su",
+  "license": "ISC",
+  "dependencies":{
+  	"async":"*",
+  	"pg":"*",
+  	"epoch.js":"0.4.2"
+  }
+}
