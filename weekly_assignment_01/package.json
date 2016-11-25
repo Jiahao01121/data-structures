@@ -1,0 +1,14 @@
+{
+  "name": "weekly_assignment_01",
+  "version": "1.0.0",
+  "description": "weekly assignment 1 - extract html and save file localy",
+  "main": "indx.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Will Su",
+  "license": "ISC",
+  "dependencies":{
+  	"request":"*"
+  }
+}

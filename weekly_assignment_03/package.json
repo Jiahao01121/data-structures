@@ -1,0 +1,16 @@
+{
+  "name": "weekly_assignment_03",
+  "version": "1.0.0",
+  "description": "week3 make request to google API",
+  "main": "week3-assignment-request-API-Geocode.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Will Su",
+  "license": "ISC",
+  "dependencies":{
+    "async":"*",
+    "cheerio":"*",
+   	 "request":"*"
+}
+}

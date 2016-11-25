@@ -1,0 +1,17 @@
+{
+  "name": "weekly_assignment_10",
+  "version": "1.0.0",
+  "description": "week11 assignment - building API with httpServer and mongodb/postgredb",
+  "main": "makeAPI.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Will Su",
+  "license": "ISC",
+  "dependencies":{
+  	"socket.io":"*",
+  	"pg":"*",
+  	"mongodb":"*",
+  	"epoch.js":"0.4.2"
+  }
+}
