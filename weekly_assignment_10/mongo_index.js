@@ -41,42 +41,50 @@ MongoClient.connect(dbUrl,function(err,db){
     *******************/
     //meeting aggregation priciple: show meeting based on location and detailed info (f.ex same meeting but different time and stuff)are showed in second array.
     db.collection('a').aggregate([
-             //stage1
-                    {  $match : {"dayOfTheWeek" : "Sunday"}  }
-                    ,
-             //stage2
-                    {  $group:  {  _id: {meetingName:"$meetingName",region: "$region",AddressMain:"$formatAddress",address1:"$location",address2:"$locationNotes",sameMeetPlaceLink:"$sameMeetPlaceLink",latLng:"$latLng"},
+      //stage1
+      {  $match : { dayOfTheWeek : "Tuesday" }  }
+      ,
+      //stage2
+      {  $group : { _id : {latLng : "$latLng",
+                           meetingName : "$meetingName",
+                           region :"$region",
+                           formatAddress:"$formatAddress",
+                           location:"$location",
+                           locationNotes:"$locationNotes",
+                           sameMeetPlaceLink:"$sameMeetPlaceLink"
+                          },
 
-                                 dayOfTheWeek : {$push : "$dayOfTheWeek" },
-                                 startTime : {$push : "$startTime" } ,
-                                 endTime : {$push : "$endTime" },
-                                 types : {$push : "$types" },
-                                 group : {$push : "$group"},
-                                }
+                    meetings : {
+                      $push : {
+                        startTime : "$startTime",
+                        endTime : "$endTime",
+                        // sameMeetPlace:"$sameMeetPlace",
+                        types:"$types",
+                        group:"$group",
+                        meetingNotes:"$meetingNotes",
+                      }
                     }
-                    ,
-             //stage3
-                    {  $group:  {  _id: {latLong : "$_id.latLng" },
+                  }
+      }
+      ,
+      // stage3
+      {  $group : { _id : "$_id.latLng", samePlaceMeet :{$push :{
+                                         meetingName : "$_id.meetingName",
+                                         region :"$_id.region",
+                                         formatAddress:"$_id.formatAddress",
+                                         location:"$_id.location",
+                                         locationNotes:"$_id.locationNotes",
+                                         sameMeetPlaceLink:"$_id.sameMeetPlaceLink",
+                                          meetingDetails: "$meetings"}  } }
 
-                                   meeting : {$addToSet : { meetingGroup : "$_id",
-
-                                                              meetings : {
-                                                                dayOfTheWeek : "$dayOfTheWeek",
-                                                                startTime : "$startTime",
-                                                                endTime : "$endTime",
-                                                                types : "$types",
-                                                                group : "$group"
-                                                              }
-                                                            }
-                                              }
-
-                    } } ],function(err,result){
+      }
+              ],function(err,result){
                       if(err){console.log(err)};
       var server = http.createServer(function(req,res){
         res.writeHead(200,{"content-type" : "application/json"});
         res.end(JSON.stringify(result))
       }).listen(process.env.PORT,process.env.IP)
-      
+
       // for (var i = 0; i < result.length; i++) {
         // console.log(result[i].meeting[0].meetings);
       // }
