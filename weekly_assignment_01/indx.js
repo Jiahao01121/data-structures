@@ -1,7 +1,7 @@
 var fs = require("fs");
 var request = require("request");
 var page = {};
-//
+//define page
 (function(){
     for (var i = 1; i <= 10; i++) {
       if(i!==10){
@@ -15,6 +15,7 @@ var page = {};
     }
 })()
 
+//request
 for (var j = 1; j < 11; j++) {
   let i = j
   request(page[i],function(err,res,body){
