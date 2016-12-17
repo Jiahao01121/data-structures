@@ -35,8 +35,36 @@ weekly_assignment_01
 
 ###### source file tree
 ```
-weekly_assignment_01
+weekly_assignment_02
 ├── README.md (detailed info about weekly_assignment_02)
+├── index.js (entry point)
+├── package.json
+│
+├── 10pages (ten html file request from AAmeeting URL)
+│   ├── AApage1.html
+│   ├── AApage3.html
+│   ├── AApage4.html
+│   ├── AApage5.html
+│   ├── AApage6.html
+│   ├── AApage7.html
+│   ├── AApage8.html
+│   ├── AApage9.html
+│   └── AApage10.html
+│
+└── node_modules
+    ├── cheerio
+    └── request
+```
+### weekly_assignment_03:
+
+###### requirements
+- Using Node.js, read one of the text files that you wrote for last week's assignment. Store the contents of the file in a variable.
+- Write a program in Node.js that will print to the console the street address for every meeting in your text file.
+
+###### source file tree
+```
+weekly_assignment_03
+├── README.md (detailed info about weekly_assignment_03)
 ├── index.js (entry point)
 ├── package.json
 │
