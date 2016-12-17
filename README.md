@@ -110,3 +110,20 @@ weekly_assignment_04
     └── mongodb
 ```
 ### weekly_assignment_05:
+
+###### requirements
+- Revisit your previous assignments and modify them to expand the data you are collecting to include all available information (about each meeting group and the meetings they hold each week)
+- Write all this data to a Mongo database, having decided upon your [unit of analysis and appropriate data structures](http://www.socialresearchmethods.net/kb/unitanal.php)
+- Using the aggregation pipeline, write a query that returns all meetings that start on Tuesdays at or after 7:00pm. Include relevant information about the meeting group, the location, special instructions, and details about the meetings.
+
+
+###### source file tree
+```
+weekly_assignment_05
+├── mongo_index.js (entry point)
+├── output.json (the data output)
+├── package.json
+│
+└── node_modules
+    └── mongodb
+```
