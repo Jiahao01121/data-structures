@@ -1,7 +1,7 @@
 ## weekly_02_assignment
 
-#### index.js
-log every address to the console
+###### index.js
+- log every address to the console
 ###### result:
 ```js
 [ '273 Bowery',
@@ -36,4 +36,3 @@ log every address to the console
   '273 Bowery' ]
   console.log(arr.length)  //29
   ```
-  
