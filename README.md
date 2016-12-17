@@ -126,3 +126,44 @@ weekly_assignment_05
 └── node_modules
     └── mongodb
 ```
+### weekly_assignment_06:
+
+###### requirements
+- You're going to continue working with the AA data you scraped, parsed, and augmented. You will continue to clean the "raw" data as you encounter its errors and limitations. As your cleaning tasks become more complex, they should be dealt with inside functions.
+- A function that takes a meeting name from your web scrape and returns a cleanly formatted meeting name. The function should:
+ 1. Remove redundancies.
+ 2. Remove unnecessary punctuation, such as parentheses, hyphens, redundant commas, and symbols.
+ 3. Correct misspellings.
+- A function that takes address data from your web scrape and returns a formatted address that is appropriate for input to the Google Geocoding API. The function should:
+ 1. Remove unnecessary address elements such as floor, room number, or directions.
+ 2. Remove unnecessary punctuation, such as parentheses, hyphens, redundant commas, and symbols.
+ 3. Correct misspellings.
+
+ ###### source file tree
+ ```
+ weekly_assignment_06
+ ├── README.MD (detailed info about weekly_assignment_06)
+ ├── package.json
+ ├── page.html
+ ├── 0.html
+ │
+ ├── 1BASIC.js (first stage: save basic info of AAmeeting page.)
+ ├── from1JS.json ((FIRST STAGE) output from 1BASIC.js)
+ │
+ ├── 2Detailed.js (scrape each meetings detailed info through the detailedPage link scraped before.)
+ ├── from2Detailed.json ((SECOND STAGE) output from 2Detailed.js)
+ │
+ ├── 3API.js (request google map API ,get the formated info and geocode.)
+ ├── from3API.json ((THIRD STAGE) output from 3API.js)
+ │
+ ├── 4cleanData.js (order & clean dataset to be ready to put into mongoDB.)
+ ├── from4Cleaned.json ((FINAL STAGE) output from 4cleanData.js)
+ │
+ └── node_modules
+     ├── cheerio
+     ├── async
+     ├── request
+     └── mongodb
+ ```
+
+ 
