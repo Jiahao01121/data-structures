@@ -179,5 +179,4 @@ weekly_assignment_07
 ├── README.MD (detailed info about weekly_assignment_07)
 ├── designSketch_01.jpg
 └── designSketch_02.jpg
-
 ```
