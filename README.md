@@ -58,14 +58,17 @@ weekly_assignment_02
 ### weekly_assignment_03:
 
 ###### requirements
-- Using Node.js, read one of the text files that you wrote for last week's assignment. Store the contents of the file in a variable.
-- Write a program in Node.js that will print to the console the street address for every meeting in your text file.
+-  instead of logging the addresses to the console, push them to an array so that it will be easier to access the data for your work on this assignment.
+- Write a program that makes a request to the Google Maps API for each address, using the data you scraped in the last assignment.
+- You'll need to do some work on the address data to prepare them for the API queries. For example, the parsed value "50 Perry Street, Ground Floor," should be modified to "50 Perry Street, New York, NY". And for use in the Google Maps API, it should be further modified to 50+Perry+Street,+New+York,+NY. The addresses are messy and may yield weird results from the API response. Don't worry too much about this right now. But, start to think about it.
+-  final output should be an array that contains an object for each meeting group. The array should have a length equal to the number of meetings. Each object should hold the relevant data for each meeting group. For now, we're focusing on the addresses and their geocoordinates.
 
 ###### source file tree
 ```
 weekly_assignment_03
 ├── README.md (detailed info about weekly_assignment_03)
 ├── index.js (entry point)
+├── output.json (the data output)
 ├── package.json
 │
 ├── 10pages (ten html file request from AAmeeting URL)
@@ -81,5 +84,6 @@ weekly_assignment_03
 │
 └── node_modules
     ├── cheerio
+    ├── async
     └── request
 ```
