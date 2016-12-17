@@ -116,7 +116,6 @@ weekly_assignment_04
 - Write all this data to a Mongo database, having decided upon your [unit of analysis and appropriate data structures](http://www.socialresearchmethods.net/kb/unitanal.php)
 - Using the aggregation pipeline, write a query that returns all meetings that start on Tuesdays at or after 7:00pm. Include relevant information about the meeting group, the location, special instructions, and details about the meetings.
 
-
 ###### source file tree
 ```
 weekly_assignment_05
