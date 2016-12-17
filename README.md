@@ -87,3 +87,26 @@ weekly_assignment_03
     ├── async
     └── request
 ```
+### weekly_assignment_04:
+
+###### requirements
+- Start MongoDB by opening a new terminal window in your Cloud 9 workspace and running the command ./mongod
+- In the Mongo shell, create and switch to a new database for the data you prepared in the previous assignment.
+- In this new database, create a new collection that will hold a "document" for each "meeting".
+- Use the mongodb module in Node to insert these documents to the collection you created in the database you created.
+
+###### source file tree
+```
+weekly_assignment_04
+├── index.js (entry point)
+├── output.json (the data output)
+│
+├── data (mongoDB database)
+│   ├── ..
+│   └── diagnostic.data
+│       └──..
+│
+└── node_modules
+    └── mongodb
+```
+### weekly_assignment_05:
