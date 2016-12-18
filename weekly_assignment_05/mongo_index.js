@@ -31,8 +31,8 @@ MongoClient.connect(dbUrl,function(err,db){
   /******************
   @@@ insert data @@@
   *******************/
-  db.collection('a').insertMany(dataSet,function(err,result){
-    if(err){console.log(err)}  //handle error
+  // db.collection('a').insertMany(dataSet,function(err,result){
+    // if(err){console.log(err)}  //handle error
 
     /******************
     @@@ second op @@@
@@ -40,48 +40,42 @@ MongoClient.connect(dbUrl,function(err,db){
     //meeting aggregation priciple: show meeting based on location and detailed info (f.ex same meeting but different time and stuff)are showed in second array.
     db.collection('a').aggregate([
              //stage1
-                    {  $match : {"dayOfTheWeek" : "Sunday"}  }
+                    {  $match : {"dayOfTheWeek" : "Tuesday"}  }
                     ,
              //stage2
                     {  $group:  {  _id: {meetingName:"$meetingName",region: "$region",AddressMain:"$formatAddress",address1:"$location",address2:"$locationNotes",sameMeetPlaceLink:"$sameMeetPlaceLink",latLng:"$latLng"},
 
                                  dayOfTheWeek : {$push : "$dayOfTheWeek" },
-                                 startTime : {$push : "$startTime" } ,
+                                 startTime : {$push :     "$startTime"        } ,
                                  endTime : {$push : "$endTime" },
                                  types : {$push : "$types" },
                                  group : {$push : "$group"},
                                 }
                     }
-                    ,
-             //stage3
-                    {  $group:  {  _id: {latLong : "$_id.latLng" },
-
-                                   meeting : {$addToSet : { meetingGroup : "$_id",
-
-                                                              meetings : {
-                                                                dayOfTheWeek : "$dayOfTheWeek",
-                                                                startTime : "$startTime",
-                                                                endTime : "$endTime",
-                                                                types : "$types",
-                                                                group : "$group"
-                                                              }
-                                                            }
-                                              }
-
-                    } } ],function(err,result){
-
-                          if(err){console.log(err)};
-                          var server = http.createServer(function(req,res){
-                            res.writeHead(200,{"content-type" : "application/json"});
-                            res.end(JSON.stringify(result))
-                          }).listen(process.env.PORT,process.env.IP)
-      // for (var i = 0; i < result.length; i++) {
-        // console.log(result[i].meeting[0].meetings);
-      // }
-      db.close();
-    });//aggregate;
-
+            ],function(err,result){
+                       if(err){console.log(err)};
+                       for (let i = result.length -1; i >=0 ; i--) {
+                        //  console.log(result[i]);
+                         for (var it = result[i].startTime.length-1; it>=0; it--){
+                            if (+result[i].startTime[it].match(/.+(?=:)/g)[0] < 19) {
+                              // console.log(+result[i].startTime[it].match(/.+(?=:)/g)[0]);
+                              result[i].startTime.splice(it,1);
+                              result[i].endTime.splice(it,1);
+                              result[i].dayOfTheWeek.splice(it,1);
+                              result[i].types.splice(it,1);
+                              result[i].group.splice(it,1);
+                            }
+                         }
+                         if(result[i].dayOfTheWeek.length == 0){
+                           result.splice(i,1)
+                         }
+                       }
+                       console.log(result);
+                       fs.writeFile('aggregationoutput.json',JSON.stringify(result),'utf8',function(){
+                         db.close();
+                       })
+    });//aggregate;d
     console.log("success");
-  });//insert
+  // });//insert
 
 });//connect
