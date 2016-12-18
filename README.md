@@ -214,3 +214,25 @@ weekly_assignment_08
     ├── epoch
     └── async
 ```
+
+### weekly_assignment_09:
+
+###### requirements
+- Modify your scripts from Weekly Assignment 8 so that you are writing data from your sensor directly to the database (the writes to the database should be consistent with your design of the front-end interface, whether based on a trigger and/or a reasonable interval).
+- write the SQL query or queries that will retrieve and transform the data to supply to your front-end interface design.
+
+###### source file tree
+```
+weekly_assignment_09
+├── README.md (detailed info about weekly_assignment_09)
+├── index.js (entry point)
+├── calculation_of_sensor_read.js (statistic calculation of sensor read)
+├── package.json
+│
+└── node_modules
+    ├── pg
+    ├── epoch
+    └── johnny-five
+
+
+```
