@@ -98,6 +98,7 @@ weekly_assignment_03
 ###### source file tree
 ```
 weekly_assignment_04
+├── README.md (detailed info about weekly_assignment_04)
 ├── index.js (entry point)
 ├── output.json (the data output)
 │
@@ -119,9 +120,16 @@ weekly_assignment_04
 ###### source file tree
 ```
 weekly_assignment_05
+├── README.md (detailed info about weekly_assignment_05)
 ├── mongo_index.js (entry point)
-├── output.json (the data output)
+├── output.json (the data output from last assignment)
+├── aggregationoutput.json (the aggregation pipeline that only show meetings after 19:00 Tuesday)
 ├── package.json
+│
+├── data (mongoDB database)
+│   ├── ..
+│   └── diagnostic.data
+│       └──..
 │
 └── node_modules
     └── mongodb
@@ -142,7 +150,7 @@ weekly_assignment_05
  ###### source file tree
  ```
  weekly_assignment_06
- ├── README.MD (detailed info about weekly_assignment_06)
+ ├── README.md (detailed info about weekly_assignment_06)
  ├── package.json
  ├── page.html
  ├── 0.html
@@ -176,7 +184,33 @@ weekly_assignment_05
 ###### source file tree
 ```
 weekly_assignment_07
-├── README.MD (detailed info about weekly_assignment_07)
+├── README.md (detailed info about weekly_assignment_07)
 ├── designSketch_01.jpg
 └── designSketch_02.jpg
+```
+
+### weekly_assignment_08:
+
+###### requirements
+- Create a SQL database (using a managed database service) and begin writing your sensor data to it.
+- Use the johnny-five module in Node.
+- Use the pg module in Node to use SQL to define (using appropriate data types), manipulate, and query your data in the AWS PostgreSQL database you created in class.
+
+###### source file tree
+```
+weekly_assignment_08
+├── README.md (detailed info about weekly_assignment_08)
+├── index.js (entry point)
+├── package.json
+│
+├── data (data collected on sensor)
+│   ├── data_THU.json (drinking data collected on Thursday)
+│   ├── data_FRI.json (drinking data collected on Friday)
+│   └── data_SAT.json (drinking data collected on Saturday)
+│       └──..
+│
+└── node_modules
+    ├── pg
+    ├── epoch
+    └── async
 ```
