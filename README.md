@@ -249,6 +249,8 @@ weekly_assignment_10
 ├── mongo_index.js (mongoDB query entry point)
 ├── output.json (the AA meeting data output from previous assignment)
 ├── postgre_index.json (postgre query entry point)
+├── drinkingData.jpg (API screenshot)
+├── AAmeeting.jpg (API screenshot)
 ├── package.json
 │
 ├── data (mongoDB database)

@@ -2,6 +2,8 @@
 
 server for AA meeting API.
 
+- route:
+https://weekly10-willsuuu.c9users.io
 - aggregation pipeline:
 ```js
 db.collection('a').aggregate([
@@ -58,13 +60,14 @@ db.collection('a').aggregate([
 
 - api output:
 
+![aa](https://raw.githubusercontent.com/Jiahao01121/data-structures/workInProgress/weekly_assignment_10/AAmeeting.jpg)
 
 
 
+### postgre_index.js
+server for sensor API
 
-postgre_index.js => server for sensor API
-
-route:
-https://weekly10-willsuuu.c9users.io
+- route: https://weekly10-willsuuu.c9users.io
 
 data out put:
+![aa](https://raw.githubusercontent.com/Jiahao01121/data-structures/workInProgress/weekly_assignment_10/drinkingData.jpg)
