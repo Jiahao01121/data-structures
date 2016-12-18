@@ -1,4 +1,19 @@
-## Data structures
+# Data structures
+
+###### index
+>  weekly_assignment_01  
+>  weekly_assignment_02  
+>  weekly_assignment_03   
+>  weekly_assignment_04   
+>  weekly_assignment_05   
+>  weekly_assignment_06   
+>  weekly_assignment_07   
+>  weekly_assignment_08   
+>  weekly_assignment_09   
+>  weekly_assignment_10   
+>  final_assignment_01    
+>  final_assignment_02
+
 
 ### weekly_assignment_01:
 ###### requirements
