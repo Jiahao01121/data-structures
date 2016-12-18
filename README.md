@@ -1,5 +1,19 @@
 ## Data structures
 
+[weekly_assignment_02](https://github.com/Jiahao01121/data-structures#weekly_assignment_02)
+
+
+
+
+
+
+
+
+
+
+
+
+
 ### weekly_assignment_01:
 ###### requirements
 - using Node.js and node package (request)in cloud9 to scrape each of the ten "Meeting List Agenda" pages for Manhattan.
