@@ -1,19 +1,5 @@
 ## Data structures
 
-[weekly_assignment_02](https://github.com/Jiahao01121/data-structures#weekly_assignment_02)
-
-
-
-
-
-
-
-
-
-
-
-
-
 ### weekly_assignment_01:
 ###### requirements
 - using Node.js and node package (request)in cloud9 to scrape each of the ten "Meeting List Agenda" pages for Manhattan.
@@ -136,7 +122,7 @@ weekly_assignment_04
 weekly_assignment_05
 ├── README.md (detailed info about weekly_assignment_05)
 ├── mongo_index.js (entry point)
-├── output.json (the data output from last assignment)
+├── output.json (the data output from previous assignment)
 ├── aggregationoutput.json (the aggregation pipeline that only show meetings after 19:00 Tuesday)
 ├── package.json
 │
@@ -252,4 +238,26 @@ weekly_assignment_09
 ### weekly_assignment_10:
 
 ###### requirements
-- Modify your scripts from
+- Modify your work from Weekly Assignments 6 and 9 so that your node instances for these assignments are functioning as web servers. Your data should be queried on web requests and the response should be a JSON document with the relevant data. Use http.createServer in Node’s http module to create a Server class. Continue using the mongodb and pg drivers to interface with your databases.
+
+- Requests using these URLs should return JSON files with the relevant data for each of your final projects.
+
+###### source file tree
+```
+weekly_assignment_10
+├── README.md (detailed info about weekly_assignment_10)
+├── mongo_index.js (mongoDB query entry point)
+├── output.json (the AA meeting data output from previous assignment)
+├── postgre_index.json (postgre query entry point)
+├── package.json
+│
+├── data (mongoDB database)
+│   ├── ..
+│   └── diagnostic.data
+│       └──..
+│
+└── node_modules
+    ├── pg
+    ├── socketio
+    └── mongodb
+```
