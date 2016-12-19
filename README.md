@@ -278,3 +278,15 @@ weekly_assignment_10
     ├── socketio
     └── mongodb
 ```
+
+
+### final_assignment_01:
+
+###### requirements
+- You will expand on weekly assignments one through six to scrape New York's AA Meeting List to capture, clean, and store all meetings in Manhattan (zones one through ten). The meetings data should be stored in and accessible through MongoDB. You will connect the MongoDB query output to Google Maps API to display meetings as map markers, with Info windows that show all relevant information about the meeting(s) at each marker.
+
+- Some questions that may arise as you bind the data to the end-user interface:
+ 1. What information does the end user need? How? Why?
+ 2. From the data on AA's meeting list, which data are relevant for display in this project? How should it be displayed?
+ 3. What does a map marker represent? A meeting group? A meeting? A location?
+ 4. What is the minimum amount of data that can be queried to provide the necessary data for the visual representation?
