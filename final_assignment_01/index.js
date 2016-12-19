@@ -84,7 +84,7 @@ MongoClient.connect(dbUrl,function(err,db){
                            formatAddress:"$formatAddress",
                            location:"$location",
                            locationNotes:"$locationNotes",
-                           sameMeetPlaceLink:"$sameMeetPlaceLink"
+                          //  sameMeetPlaceLink:"$sameMeetPlaceLink"
                           },
 
                     meetings : {
@@ -119,7 +119,7 @@ MongoClient.connect(dbUrl,function(err,db){
           res.write(JSON.stringify(result));
           res.end(indexEnd);
       }
-      console.log(JSON.stringify(result));
+      fs.writeFileSync('aggre.json',JSON.stringify(result),'utf8');
       db.close();
           // console.log(result);
     }); //aggregate;
