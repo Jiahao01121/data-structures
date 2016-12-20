@@ -146,8 +146,8 @@ meetingDetails:
 ## google map API
 use google map API to show data on the map.
 
-![mockup](https://raw.githubusercontent.com/Jiahao01121/data-structures/master/final_assignment_01/map01.jpg)
+![mockup](https://raw.githubusercontent.com/Jiahao01121/data-structures/master/final_assignment_01/map01.jpeg)
 
-![mockup](https://raw.githubusercontent.com/Jiahao01121/data-structures/master/final_assignment_01/map02.jpg)
+![mockup](https://raw.githubusercontent.com/Jiahao01121/data-structures/master/final_assignment_01/map02.jpeg)
 
-![mockup](https://raw.githubusercontent.com/Jiahao01121/data-structures/master/final_assignment_01/map03.jpg)
+![mockup](https://raw.githubusercontent.com/Jiahao01121/data-structures/master/final_assignment_01/map03.jpeg)
