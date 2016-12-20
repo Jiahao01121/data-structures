@@ -42,7 +42,7 @@ UI of drinking data visualization. after check expand, each row of data gonna sh
 ![mockup](https://raw.githubusercontent.com/Jiahao01121/data-structures/master/weekly_assignment_07/designSketch_01.jpg)
 
 #### prototype for drinking data.
-![screenshot](https://raw.githubusercontent.com/Jiahao01121/data-structures/master/Final_assignment_02/proto.jpg)
+![screenshot](https://raw.githubusercontent.com/Jiahao01121/data-structures/master/Final_assignment_02/proto.jpeg)
 
 #### code:
 use socket io to pass data.
