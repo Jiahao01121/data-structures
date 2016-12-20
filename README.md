@@ -290,3 +290,47 @@ weekly_assignment_10
  2. From the data on AA's meeting list, which data are relevant for display in this project? How should it be displayed?
  3. What does a map marker represent? A meeting group? A meeting? A location?
  4. What is the minimum amount of data that can be queried to provide the necessary data for the visual representation?
+
+ ###### source file tree
+ ```
+ final_assignment_01
+ ├── README.md (detailed info about final_assignment_01)
+ ├── index.js (entry point)
+ ├── index_head.txt (webpage head)
+ ├── index_end.txt (webpage end)
+ ├── map01.jpg (screenshot)
+ ├── map02.jpg (screenshot)
+ ├── map03.jpg (screenshot)
+ ├── package.json
+ │
+ ├── data (mongoDB database)
+ │   ├── ..
+ │   └── diagnostic.data
+ │       └──..
+ │
+ └── node_modules
+     └── mongodb
+ ```
+
+ ### final_assignment_02:
+
+ ###### requirements
+- Submit​ ​the​ ​assignment​ ​as​ ​an​ ​API​ ​that​ ​returns​ ​an​ ​array​ ​of​ ​results​ ​that​ ​would​ ​be​ ​appropriate​ ​at
+the​ ​time​ ​of​ ​the​ ​query​ ​(taking​ ​into​ ​consideration​ ​the​ ​elements​ ​of​ ​your​ ​final​ ​sketch).​ ​The​ ​API​ ​will
+not​ ​take​ ​any​ ​parameters;​ ​instead,​ ​the​ ​query​ ​will​ ​programmatically​ ​update​ ​the​ ​query​ ​based​ ​on the​ ​elements​ ​of​ ​your​ ​final​ ​sketch.  
+
+ ###### source file tree
+ ```
+ final_assignment_02
+ ├── README.md (detailed info about final_assignment_02)
+ ├── index.js (entry point)
+ ├── index.html (webpage)
+ ├── proto.jpg (screenshot)
+ ├── package.json
+ │
+ └── node_modules
+     ├── epoch
+     ├── socketio
+     ├── pg
+     └── johnny-five
+ ```

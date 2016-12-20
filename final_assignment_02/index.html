@@ -1,0 +1,45 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+  <style> body {padding: 0; margin: 0;} </style>
+</head>
+
+<body>
+
+  <script type="text/javascript">
+    var socket = io('http://localhost:3000');
+
+    function show(month,date,year,time,value) {
+      var btn = document.createElement("BUTTON");
+      document.body.appendChild(btn);
+      var para = document.createElement("P");
+      var t = document.createTextNode(`${month}/${date}/${year} || ${time} || ${value}`);
+      document.body.appendChild(btn);
+      para.appendChild(t);
+      document.body.appendChild(para);
+    }
+
+    socket.on('responsive', function (data) {
+      var year = new Date(data.drinkdate).getFullYear();
+      var month = new Date(data.drinkdate).getMonth();
+      var date = new Date(data.drinkdate).getDate();
+      console.log(data)
+      // console.log(typeof data.drinktime);
+      show(month,date,year,data.drinktime,data.drinkamount);
+    });
+
+    socket.on('activate', function (data) {
+      for (var i = 0; i < data.length; i++) {
+        // console.log(data[i])
+        var year = new Date(data[i].drinkdate).getFullYear();
+        var month = new Date(data[i].drinkdate).getMonth();
+        var date = new Date(data[i].drinkdate).getDate();
+        // console.log(month,date);
+        show(month,date,year,data[i].drinktime,data[i].drinkamount)
+      }
+    });
+  </script>
+
+</body>
+</html>

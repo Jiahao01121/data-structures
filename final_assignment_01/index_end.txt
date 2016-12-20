@@ -1,48 +1,42 @@
 ;
 
         function makeContent(cont) {
+        var today = new Date().getDay(); //weekDay
+        switch (today) {
+          case 0:
+            today = "Sunday";
+            break;
+            case 1:
+            today   = "Monday";
+              break;
+              case 2:
+              today   = "Tuesday";
+                break;
+                case 3:
+                today   = "Wednesday";
+                  break;
+                  case 4:
+                today     = "Thursday";
+                    break;
+                    case 5:
+                today       = "Friday";
+                      break;
+                      case 6:
+                today         = "Saturday";
+                        break;
+        }
+//container head
             var contentHolder = '<div id="content">' +
                 '<div id="siteNotice">' +
                 '</div>';
+//array one meetingName & address
             for (var i = 0; i < cont.samePlaceMeet.length; i++) {
-            if (i == 0) {
-                contentHolder = contentHolder + '<h2>' + cont.samePlaceMeet[i].formatAddress + '</h2>';
-            }
-                contentHolder = contentHolder + '<h1 id="firstHeading" class="firstHeading">';
-                contentHolder = contentHolder + cont.samePlaceMeet[i].meetingName + '</h1>';
-
+                contentHolder = contentHolder + '<h1 id="firstHeading" class="firstHeading">' +"-------------------------------------"+ cont.samePlaceMeet[i].meetingName + '</h1>' + '<p>' + cont.samePlaceMeet[i].formatAddress + '<br>' + cont.samePlaceMeet[i].locationNotes +  '<br>'+'<strong>'+  today + "\'s meeting" + '</strong>';
                 for (var j = 0; j < cont.samePlaceMeet[i].meetingDetails.length; j++) {
-                /*
-                    var mt, si;
-                    if (cont.meetingGroups[i].meetingType[j] == "BB") {
-                        mt = "Big Book ";
-                    }
-                    else if (cont.meetingGroups[i].meetingType[j] == "B") {
-                        mt = "Beginners ";
-                    }
-                    else if (cont.meetingGroups[i].meetingType[j] == "C") {
-                        mt = "Closed Discussion ";
-                    }
-                    else if (cont.meetingGroups[i].meetingType[j] == "S") {
-                        mt = "Step ";
-                    }
-                    else if (cont.meetingGroups[i].meetingType[j] == "T") {
-                        mt = "Tradition ";
-                    }
-                    else if (cont.meetingGroups[i].meetingType[j] == "O") {
-                        mt = "Open Meeting ";
-                    }
-                    else if (cont.meetingGroups[i].meetingType[j] == "OD") {
-                        mt = "Open Discussion ";
-                    }
-                    else {
-                        mt = "";
-                    }
-                */
-                    contentHolder = contentHolder + cont.samePlaceMeet[i].meetingDetails[j].startTime + '<br>';
+                    contentHolder = contentHolder + '<br>' + '<strong>' + cont.samePlaceMeet[i].meetingDetails[j].startTime + '</strong>' + '  ' + cont.samePlaceMeet[i].meetingDetails[j].types ;
                 }
                 contentHolder = contentHolder + '</p>';
-                contentHolder = contentHolder + '<div class="iw-bottom-gradient"></div>';
+                contentHolder = contentHolder + '<div class="iw-bottom-gradient"></div></div>';
             }
             return contentHolder;
         }
