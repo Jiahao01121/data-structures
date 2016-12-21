@@ -66,7 +66,9 @@ db.collection('a').aggregate([
 ```js
 { _id: { lat: 40.7944661, lng: -73.9706389 },
   samePlaceMeet:
-   [ { meetingName: 'Ninety-Sixth Street Workshop',
+   [ 
+   
+   { meetingName: 'Ninety-Sixth Street Workshop',
        region: 'Upper West Side',
        formatAddress: '207 W 96th St, New York, NY 10025, USA',
        location: 'Holy Name Church',
@@ -76,8 +78,10 @@ db.collection('a').aggregate([
             endTime: '23:15',
             types: 'Step Meeting',
             group: 'NINETY-SIXTH STREET WORKSHOP (Group #13400)',
-            meetingNotes: 'undefined' } ] },
-     { meetingName: 'We Are Not Doctors ',
+            meetingNotes: 'undefined' } ] 
+   },
+   
+   { meetingName: 'We Are Not Doctors ',
        region: 'Upper West Side',
        formatAddress: '207 W 96th St, New York, NY 10025, USA',
        location: 'Holy Name Church',
@@ -87,8 +91,10 @@ db.collection('a').aggregate([
             endTime: '19:00',
             types: 'Open, Topic Discussion',
             group: 'WE ARE NOT DOCTORS (WESTSIDE) (Group #7J)',
-            meetingNotes: 'undefined' } ] },
-     { meetingName: 'Turn It Over',
+            meetingNotes: 'undefined' } ] 
+   },
+   
+   { meetingName: 'Turn It Over',
        region: 'Upper West Side',
        formatAddress: '207 W 96th St, New York, NY 10025, USA',
        location: 'Holy Name Church',
@@ -103,44 +109,52 @@ db.collection('a').aggregate([
             endTime: '17:30',
             types: 'Closed',
             group: 'TURN IT OVER (Group #14960)',
-            meetingNotes: 'undefined' } ] },
-     { meetingName: 'Mid-Day Cheer',
+            meetingNotes: 'undefined' } ] 
+   },
+    
+   { meetingName: 'Mid-Day Cheer',
        region: 'Upper West Side',
        formatAddress: '207 W 96th St, New York, NY 10025, USA',
-location: 'Holy Name Church',
-locationNotes: 'Basement Between Amsterdam Avenue & Bway',
-meetingDetails:
- [ { startTime: '13:00',
-     endTime: '14:15',
-     types: 'Big Book',
-     group: 'MID-DAY CHEER (Group #12880)',
-     meetingNotes: 'undefined' } ] },
-{ meetingName: 'First Things First',
-region: 'Upper West Side',
-formatAddress: '207 W 96th St, New York, NY 10025, USA',
-location: 'Holy Name Church',
-locationNotes: 'Basement Between Amsterdam Avenue & Bway',
-meetingDetails:
- [ { startTime: '06:00',
-     endTime: '07:00',
-     types: 'Literature, Open, Topic Discussion',
-     group: 'FIRST THINGS FIRST (Group #11520)',
-     meetingNotes: 'As Bill Sees It' },
-   { startTime: '07:15',
-     endTime: '08:15',
-     types: 'Closed',
-     group: 'FIRST THINGS FIRST (Group #11520)',
-     meetingNotes: 'undefined' },
-   { startTime: '08:45',
-     endTime: '09:45',
-     types: 'Beginner',
-     group: 'FIRST THINGS FIRST (Group #11520)',
-     meetingNotes: 'undefined' },
-   { startTime: '10:15',
-     endTime: '11:15',
-     types: 'Closed, Literature',
-     group: 'FIRST THINGS FIRST (Group #11520)',
-     meetingNotes: 'Living Sober' } ] } ] }
+       location: 'Holy Name Church',
+       locationNotes: 'Basement Between Amsterdam Avenue & Bway',
+       meetingDetails:
+         [ { startTime: '13:00',
+             endTime: '14:15',
+             types: 'Big Book',
+             group: 'MID-DAY CHEER (Group #12880)',
+             meetingNotes: 'undefined' } ] 
+             
+   },
+   
+   { meetingName: 'First Things First',
+     region: 'Upper West Side',
+     formatAddress: '207 W 96th St, New York, NY 10025, USA',
+     location: 'Holy Name Church',
+     locationNotes: 'Basement Between Amsterdam Avenue & Bway',
+     meetingDetails:
+         [ { startTime: '06:00',
+             endTime: '07:00',
+             types: 'Literature, Open, Topic Discussion',
+             group: 'FIRST THINGS FIRST (Group #11520)',
+             meetingNotes: 'As Bill Sees It' },
+           { startTime: '07:15',
+             endTime: '08:15',
+             types: 'Closed',
+             group: 'FIRST THINGS FIRST (Group #11520)',
+             meetingNotes: 'undefined' },
+           { startTime: '08:45',
+             endTime: '09:45',
+             types: 'Beginner',
+             group: 'FIRST THINGS FIRST (Group #11520)',
+             meetingNotes: 'undefined' },
+           { startTime: '10:15',
+             endTime: '11:15',
+             types: 'Closed, Literature',
+             group: 'FIRST THINGS FIRST (Group #11520)',
+             meetingNotes: 'Living Sober' } ] 
+     } 
+   ] 
+}
 ```
 
 ## google map API
